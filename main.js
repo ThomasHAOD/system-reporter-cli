@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 //console helper libraries
 const chalk = require('chalk');
 const clear = require('clear');
