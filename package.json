@@ -1,0 +1,16 @@
+{
+  "name": "system-reporter-cli",
+  "version": "1.0.0",
+  "description": "This Command Line Interface provides commands for you to run in the terminal to report on your system and can generate reports to a file on your system.",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "cli",
+    "system",
+    "report"
+  ],
+  "author": "T. OD",
+  "license": "ISC"
+}
