@@ -1,10 +1,4 @@
-const os = require("os");
-
-const osCode = os.type();
-
-const osVersion = os.release();
-
-const username = os.userInfo().username;
+const { username, osCode, osVersion } = require('./lib/os');
 
 const greeting = `Hello ${username}, welcome to the System Reporter CLI. Your current system is ${osCode}, version ${osVersion}.`;
 
