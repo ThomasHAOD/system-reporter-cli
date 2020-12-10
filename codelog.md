@@ -12,5 +12,6 @@ Today I initialised the project and had it output basic information about the us
 
 ### Issues
 
-The only issue I have come across so far is the package returns an error when I try to run it as a cli:
-`` /usr/local/bin/system-reporter: line 1: syntax error near unexpected token `(' /usr/local/bin/system-reporter: line 1: `const { username, osCode, osVersion } = require('./lib/os');' ``
+The only issue I have come across so far is the package returns an error when I try to run it as a cli:  
+`` /usr/local/bin/system-reporter: line 1: syntax error near unexpected token `(' ``  
+`` /usr/local/bin/system-reporter: line 1: `const { username, osCode, osVersion } = require('./lib/os');'  ``
