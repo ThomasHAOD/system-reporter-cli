@@ -6,6 +6,7 @@ const clear = require('clear');
 const figlet = require('figlet');
 
 const nameHandler = require('./lib/user-input/name-handler');
+const reportRequestHandler = require('./lib/user-input/system-report');
 
 const banner = chalk.green(
   figlet.textSync('System Reporter', { horizontalLayout: 'full' })
@@ -17,6 +18,7 @@ console.log(banner);
 
 const run = async () => {
   await nameHandler();
+  await reportRequestHandler();
 };
 
 run();
