@@ -22,6 +22,8 @@ This was solved by adding a "shebang" line at the top of the entrypoint file. Th
 
 ## Day 2
 
+Today I implemented the use of writing a config file to save a user's name so they can be addressed personally, a bit of functionality that would have blown my mind as a 7 year old in 1995 🤓.
+
 ### Issues
 
 One issue I came across today was the `fs.readFile()` method not working which was puzzling initially, but I quickly found out it is an asynchronous function and I was using it synchronosly. To use it properly it should be used with async-await (or a Promise), or alternatively (if the file is small), fs.readFileSync() can be used.
