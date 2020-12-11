@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
 
+//CLI Stages
 const nameHandler = require('./lib/user-input/name-handler');
 const reportRequestHandler = require('./lib/user-input/system-report');
 
@@ -18,7 +19,7 @@ console.log(banner);
 
 const run = async () => {
   await nameHandler();
-  await reportRequestHandler();
+  const report = await reportRequestHandler();
 };
 
 run();
