@@ -18,7 +18,7 @@ The only issue I have come across so far is the package returns an error when I 
 `` /usr/local/bin/system-reporter: line 1: syntax error near unexpected token `(' ``  
 `` /usr/local/bin/system-reporter: line 1: `const { username, osCode, osVersion } = require('./lib/os');'  ``
 
-This was solved by adding a "shebang" line at the top of the entrypoint file. This line, which starts with '#!', lets the unix system know to parse this file as an interpreter directive.
+This was solved by adding a "shebang" line at the top of the entrypoint file. This line, which starts with `#!`, lets the unix system know to parse this file as an interpreter directive.
 
 ## Day 2
 
@@ -26,6 +26,10 @@ Today I implemented the use of writing a config file to save a user's name so th
 
 ### Issues
 
-One issue I came across today was the `fs.readFile()` method not working which was puzzling initially, but I quickly found out it is an asynchronous function and I was using it synchronosly. To use it properly it should be used with async-await (or a Promise), or alternatively (if the file is small), fs.readFileSync() can be used.
+One issue I came across today was the `fs.readFile()` method not working which was puzzling initially, but I quickly found out it is an asynchronous function and I was using it synchronosly. To use it properly it should be used with async-await (or a Promise), or alternatively (if the file is small), `fs.readFileSync()` can be used.
 
 Other similar issues popped up, all revolving around my poor level of understanding in how asynchronos functions work, and in particular what order to expect awaited vs non-awaited functions to be called.
+
+## Day 3
+
+Today I implemented the ability to pass arguments to the CLI to select a single type of report, as well as a prompt to save a file, and the saving of that file which will contain all reports.

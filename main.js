@@ -18,8 +18,9 @@ clear();
 console.log(banner);
 
 const run = async () => {
+  const argument = process.argv[2];
   await nameHandler();
-  const report = await reportRequestHandler();
+  await reportRequestHandler(argument);
 };
 
 run();
